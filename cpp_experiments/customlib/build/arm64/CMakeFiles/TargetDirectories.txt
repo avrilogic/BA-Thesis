@@ -1,0 +1,4 @@
+/mnt/e/code/BA-Thesis/cmake/customlib/build/arm64/CMakeFiles/customlib_static.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/arm64/CMakeFiles/customlib_shared.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/arm64/CMakeFiles/edit_cache.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/arm64/CMakeFiles/rebuild_cache.dir

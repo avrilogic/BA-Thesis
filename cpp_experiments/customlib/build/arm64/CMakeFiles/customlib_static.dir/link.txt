@@ -1,0 +1,2 @@
+/usr/bin/aarch64-linux-gnu-ar qc libcustomlib_static.a CMakeFiles/customlib_static.dir/src/staticlib.cxx.o CMakeFiles/customlib_static.dir/src/frame.cpp.o
+/usr/bin/aarch64-linux-gnu-ranlib libcustomlib_static.a

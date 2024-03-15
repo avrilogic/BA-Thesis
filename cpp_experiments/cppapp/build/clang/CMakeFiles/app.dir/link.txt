@@ -1,0 +1,1 @@
+/usr/bin/clang++ -Wall -Wextra CMakeFiles/app.dir/src/app.cpp.o -o app  libmylib.a ../../libs/clang/libcustomlib_static.a 

@@ -1,0 +1,30 @@
+{
+  "java.compile.nullAnalysis.mode": "disabled",
+  "cmake.configureOnOpen": false,
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "kotlin.languageServer.enabled": false,
+  "kotlin.indexing.enabled": false,
+  "kotlin.externalSources.useKlsScheme": false,
+  "kotlin.diagnostics.enabled": false,
+  "kotlin.debugAdapter.enabled": false,
+  "kotlin.completion.snippets.enabled": true,
+  "cSpell.words": [
+    "dylib",
+    "Fluttertoast",
+    "kvmap",
+    "Struct"
+  ],
+  "files.associations": {
+    "windows.h": "c",
+    "vector": "cpp",
+    "xstring": "cpp",
+    "xutility": "cpp"
+  },
+  "java.help.showReleaseNotes": false,
+  "vsintellicode.java.completionsEnabled": false,
+  "java.debug.settings.forceBuildBeforeLaunch": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#ff00c3"
+  }
+}

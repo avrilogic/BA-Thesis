@@ -1,0 +1,38 @@
+name: flutter_experiments
+description: "Demo App for Flutter Experiments with native code and plugins."
+version: 1.0.0
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=3.2.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  provider: ^6.1.2
+  package_info_plus: ^5.0.1
+  fluttertoast: ^8.2.4
+  collection: ^1.18.0
+  path_provider: ^2.1.2
+  platform_plugin: 
+    path: packages/platform_plugin
+  method_channel_jni_test_plugin: 
+    path: packages/method_channel_jni_test_plugin
+  ffi_simple_test_plugin: 
+    path: packages/ffi_simple_test_plugin
+  ffigen_test_plugin: 
+    path: packages/ffigen_test_plugin
+  ffi_precompiled_lib_test_plugin: 
+    path: packages/ffi_precompiled_lib_test_plugin
+dependency_overrides:
+  web: ^0.5.0    
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  pigeon: ^17.1.1
+
+flutter:
+  uses-material-design: true

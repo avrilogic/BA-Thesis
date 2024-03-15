@@ -1,0 +1,2 @@
+#define VERSION_MINOR @staticlib_VERSION_MINOR@
+#define VERSION_MAJOR @staticlib_VERSION_MAJOR@

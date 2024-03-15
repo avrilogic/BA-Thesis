@@ -1,0 +1,4 @@
+/mnt/e/code/BA-Thesis/cmake/customlib/build/clang/CMakeFiles/customlib_static.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/clang/CMakeFiles/customlib_shared.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/clang/CMakeFiles/edit_cache.dir
+/mnt/e/code/BA-Thesis/cmake/customlib/build/clang/CMakeFiles/rebuild_cache.dir

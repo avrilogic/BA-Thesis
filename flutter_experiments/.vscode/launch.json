@@ -1,0 +1,205 @@
+{
+  // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+  // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+  // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter_experiments",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "flutter_experiments (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "flutter_experiments (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "cpptestlib",
+      "cwd": "packages\\cpptestlib",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "cpptestlib (profile mode)",
+      "cwd": "packages\\cpptestlib",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "cpptestlib (release mode)",
+      "cwd": "packages\\cpptestlib",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ffigen_test_plugin",
+      "cwd": "packages\\ffigen_test_plugin",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ffigen_test_plugin (profile mode)",
+      "cwd": "packages\\ffigen_test_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "ffigen_test_plugin (release mode)",
+      "cwd": "packages\\ffigen_test_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ffi_simple_test_plugin",
+      "cwd": "packages\\ffi_simple_test_plugin",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ffi_simple_test_plugin (profile mode)",
+      "cwd": "packages\\ffi_simple_test_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "ffi_simple_test_plugin (release mode)",
+      "cwd": "packages\\ffi_simple_test_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ffi_test_android",
+      "cwd": "packages\\ffi_test_android",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "ffi_test_android (profile mode)",
+      "cwd": "packages\\ffi_test_android",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "ffi_test_android (release mode)",
+      "cwd": "packages\\ffi_test_android",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "platform_plugin",
+      "cwd": "packages\\platform_plugin",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "platform_plugin (profile mode)",
+      "cwd": "packages\\platform_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "platform_plugin (release mode)",
+      "cwd": "packages\\platform_plugin",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "example",
+      "cwd": "packages\\cpptestlib\\example",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "example (profile mode)",
+      "cwd": "packages\\cpptestlib\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "example (release mode)",
+      "cwd": "packages\\cpptestlib\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "example",
+      "cwd": "packages\\ffigen_test_plugin\\example",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "example (profile mode)",
+      "cwd": "packages\\ffigen_test_plugin\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "example (release mode)",
+      "cwd": "packages\\ffigen_test_plugin\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "example",
+      "cwd": "packages\\ffi_test_android\\example",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "example (profile mode)",
+      "cwd": "packages\\ffi_test_android\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "example (release mode)",
+      "cwd": "packages\\ffi_test_android\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "example",
+      "cwd": "packages\\platform_plugin\\example",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "example (profile mode)",
+      "cwd": "packages\\platform_plugin\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "example (release mode)",
+      "cwd": "packages\\platform_plugin\\example",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 1
+  },
+  "configurePresets": [
+    {
+      "name": "arm64-v8a",
+      "displayName": "ARM64-v8a",
+      "description": "Build for ARM64-v8a using its toolchain file",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/arm64-v8a",
+      "toolchainFile": "${sourceDir}/toolchains/arm64-v8a-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "armeabi-v7a",
+      "displayName": "armeabi-v7a",
+      "description": "Build for armeabi-v7a using its toolchain file",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/armeabi-v7a",
+      "toolchainFile": "${sourceDir}/toolchains/armeabi-v7a-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "x86",
+      "displayName": "x86",
+      "description": "Build for x86 using its toolchain file",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/x86",
+      "toolchainFile": "${sourceDir}/toolchains/x86-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "x86_64",
+      "displayName": "x86_64",
+      "description": "Build for x86_64 using its toolchain file",
+      "hidden": false,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/x86_64",
+      "toolchainFile": "${sourceDir}/toolchains/x86_64-toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "arm64-v8a",
+      "configurePreset": "arm64-v8a",
+      "configuration": "Release"
+    },
+    {
+      "name": "armeabi-v7a",
+      "configurePreset": "armeabi-v7a",
+      "configuration": "Release"
+    },
+    {
+      "name": "x86",
+      "configurePreset": "x86",
+      "configuration": "Release"
+    },
+    {
+      "name": "x86_64",
+      "configurePreset": "x86_64",
+      "configuration": "Release"
+    }
+  ]
+}

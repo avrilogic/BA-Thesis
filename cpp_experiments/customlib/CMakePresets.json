@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "mingw-build",
+      "description": "Build mit MinGW-Toolchain",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/mingw",
+      "toolchainFile": "../toolchains/mingw-toolchain.cmake"
+    },
+    {
+      "name": "gcc-build",
+      "description": "Standard Linux Build mit GCC",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/gcc",
+      "toolchainFile": "../toolchains/linux-toolchain.cmake"
+  },
+  {
+      "name": "clang-build",
+      "description": "Standard Linux Build mit Clang",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/clang",
+      "toolchainFile": "../toolchains/clang-toolchain.cmake"
+  },
+  {
+    "name": "arm64-build",
+    "description": "Cross-Compile für ARM64",
+    "generator": "Unix Makefiles",
+    "binaryDir": "${sourceDir}/build/arm64",
+    "toolchainFile": "../toolchains/arm64-toolchain.cmake"
+}
+  ]
+}

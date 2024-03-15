@@ -1,0 +1,3 @@
+/mnt/e/code/BA-Thesis/flutter_experiments/sideload_server/sideload_lib/build/x86/CMakeFiles/sideloadlib.dir
+/mnt/e/code/BA-Thesis/flutter_experiments/sideload_server/sideload_lib/build/x86/CMakeFiles/edit_cache.dir
+/mnt/e/code/BA-Thesis/flutter_experiments/sideload_server/sideload_lib/build/x86/CMakeFiles/rebuild_cache.dir

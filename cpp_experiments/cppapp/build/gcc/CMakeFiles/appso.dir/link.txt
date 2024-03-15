@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/appso.dir/src/appso.cpp.o -o appso 

@@ -1,0 +1,1 @@
+/usr/bin/clang++ -Wall -Wextra CMakeFiles/appso.dir/src/appso.cpp.o -o appso 

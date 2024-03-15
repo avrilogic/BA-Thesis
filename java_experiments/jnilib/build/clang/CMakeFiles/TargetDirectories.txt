@@ -1,0 +1,3 @@
+/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles/cppjnilib.dir
+/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles/edit_cache.dir
+/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles/rebuild_cache.dir

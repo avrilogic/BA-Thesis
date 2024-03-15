@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-g++ -fPIC -shared -Wl,-soname,libcustomlib_shared.so -o libcustomlib_shared.so CMakeFiles/customlib_static.dir/src/staticlib.cxx.o CMakeFiles/customlib_static.dir/src/frame.cpp.o 

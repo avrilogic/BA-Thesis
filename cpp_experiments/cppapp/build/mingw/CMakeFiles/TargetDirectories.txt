@@ -1,0 +1,5 @@
+/mnt/e/code/BA-Thesis/cmake/cppapp/build/mingw/CMakeFiles/mylib.dir
+/mnt/e/code/BA-Thesis/cmake/cppapp/build/mingw/CMakeFiles/app.dir
+/mnt/e/code/BA-Thesis/cmake/cppapp/build/mingw/CMakeFiles/appso.dir
+/mnt/e/code/BA-Thesis/cmake/cppapp/build/mingw/CMakeFiles/edit_cache.dir
+/mnt/e/code/BA-Thesis/cmake/cppapp/build/mingw/CMakeFiles/rebuild_cache.dir

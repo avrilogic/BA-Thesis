@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-g++ CMakeFiles/app.dir/src/app.cpp.o -o app  libmylib.a ../../libs/arm64/libcustomlib_static.a 

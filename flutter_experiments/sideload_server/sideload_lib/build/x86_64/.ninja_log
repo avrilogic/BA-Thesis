@@ -1,0 +1,3 @@
+# ninja log v5
+3	100	1710017525413088400	CMakeFiles/sideloadlib.dir/src/customlib.cpp.o	6eaa6963d02946bf
+121	279	1710017525594991900	libsideloadlib.so	de2329595d6834ab
