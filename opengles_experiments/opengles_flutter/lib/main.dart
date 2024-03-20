@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opengles_flutter/open_gl_platform_view_page.dart';
 import 'package:opengles_flutter/open_gl_texture.dart';
 import 'package:opengles_flutter/open_gl_texture_page.dart';
 
@@ -40,25 +41,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           const Card(
             child: Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(24),
               child: Text(
                 'This application demonstrates the use of OpenGL in Flutter. ',
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
+          ListTile(
+            title: const Text('OpenGL Texture'),
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) => const OpenGLTexturePage()),
               );
             },
-            child: const Text('OpenGL Texture'),
+          ),
+          ListTile(
+            title: const Text('OpenGL Platform View'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const OpenGlPlatformViewPage()),
+              );
+            },
           ),
         ],
       ),

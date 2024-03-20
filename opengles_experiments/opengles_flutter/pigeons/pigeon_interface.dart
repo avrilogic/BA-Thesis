@@ -23,3 +23,8 @@ abstract class OpenGLESRenderPlugin {
 
   int getFps(int textureId);
 }
+
+@HostApi()
+abstract class OpenGLPlatformViewControl {
+  int getFps();
+}

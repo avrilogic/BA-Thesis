@@ -23,7 +23,6 @@ class _OpenGlTextureState extends State<OpenGlTexture> {
     _fpsStream = Stream.periodic(const Duration(seconds: 1)).asyncMap((event) {
       if (_textureId == null) return Future.value(0);
       final value = widget.controller.getFps(_textureId!);
-      debugPrint('Stream FPS: $value');
       return value;
     });
 
