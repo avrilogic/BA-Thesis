@@ -10,13 +10,13 @@ import io.flutter.view.TextureRegistry;
 import th.thesis.opengles_flutter.renderer.MyGLRendererWorker;
 
 public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, FlutterPlugin {
-    private TextureRegistry textures;
+    private TextureRegistry textureRegistry;
     private LongSparseArray<OpenGLRenderer> renders = new LongSparseArray<>();
 
     @Override
     public void createTexture(@NonNull Long width, @NonNull Long height, @NonNull PigeonInterface.Result<Long> result) {
         // Create new SurfaceTexture
-        TextureRegistry.SurfaceTextureEntry newEntry = textures.createSurfaceTexture();
+        TextureRegistry.SurfaceTextureEntry newEntry = textureRegistry.createSurfaceTexture();
         SurfaceTexture surface = newEntry.surfaceTexture();
         // Set initial dimensions
         surface.setDefaultBufferSize(width.intValue(), height.intValue());
@@ -48,13 +48,13 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
     @Override
     public Long getFps(@NonNull Long textureId) {
         OpenGLRenderer render = renders.get(textureId);
-        Long fps = (long)render.getFps();
+        int fps = render.getFps();
         return fps;
     }
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
-        this.textures = binding.getTextureRegistry();
+        this.textureRegistry = binding.getTextureRegistry();
         PigeonInterface.OpenGLESRenderPlugin.setUp(binding.getBinaryMessenger(),this);
     }
 
