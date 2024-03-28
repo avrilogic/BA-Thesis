@@ -21,7 +21,7 @@ class OpenGlPlatformViewPage extends StatelessWidget {
             ),
           ),
           child: Column(children: [
-            Expanded(child: OpenGlPlatformView()),
+            const Expanded(child: OpenGlPlatformView()),
             OpenGlPlatformViewFps()
           ]),
         ),

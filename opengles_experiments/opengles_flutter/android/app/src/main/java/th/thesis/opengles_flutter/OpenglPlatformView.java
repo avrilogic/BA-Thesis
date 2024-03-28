@@ -19,13 +19,14 @@ import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 import th.thesis.opengles_flutter.renderer.MyGLRendererWorker;
 
-public class OpenglPlatformView implements PlatformView {
+public class OpenGLPlatformView implements PlatformView {
     @NonNull
-    private final OpenglPlatformViewSurfaceView view;
+    private final OpenGLPlatformViewSurfaceView view;
     public static FPSCounter fpsCounter = new FPSCounter();
 
-    private OpenglPlatformView(@NonNull Context context, int id, @Nullable Map<String, Object> creationParams) {
-        view = new OpenglPlatformViewSurfaceView(context);
+    private OpenGLPlatformView(@NonNull Context context, int id, @Nullable Map<String, Object> creationParams) {
+        // Create the view that will render the OpenGL content
+        view = new OpenGLPlatformViewSurfaceView(context);
     }
 
     @Nullable
@@ -38,25 +39,30 @@ public class OpenglPlatformView implements PlatformView {
     public void dispose() {
     }
 
+    // Factory for creating OpenGLPlatformView from Flutter
     public static class Factory extends PlatformViewFactory {
         Factory() {
+            // Use StandardMessageCodec for communication between Flutter and Android
             super(StandardMessageCodec.INSTANCE);
         }
         @NonNull
         @Override
         public PlatformView create(Context context, int viewId, @Nullable Object args) {
             final Map<String, Object> creationParams = (Map<String, Object>) args;
-            return new OpenglPlatformView(context, viewId, creationParams);
+            return new OpenGLPlatformView(context, viewId, creationParams);
         }
     }
-    private class OpenglPlatformViewSurfaceView extends GLSurfaceView {
-        public OpenglPlatformViewSurfaceView(Context context) {
+
+    // Custom GLSurfaceView for OpenGL rendering
+    private class OpenGLPlatformViewSurfaceView extends GLSurfaceView {
+        public OpenGLPlatformViewSurfaceView(Context context) {
             super(context);
             setEGLContextClientVersion(2);
-            setRenderer(new OpenglPlatformViewSurfaceViewRenderer());
+            setRenderer(new OpenGLPlatformViewSurfaceViewRenderer());
         }
 
-        private class OpenglPlatformViewSurfaceViewRenderer implements GLSurfaceView.Renderer{
+        // Custom GLSurfaceView.Renderer that delegates rendering to MyGLRendererWorker
+        private class OpenGLPlatformViewSurfaceViewRenderer implements GLSurfaceView.Renderer{
 
             private MyGLRendererWorker worker = new MyGLRendererWorker();
             @Override
@@ -76,16 +82,19 @@ public class OpenglPlatformView implements PlatformView {
             }
         }
     }
-
+    
+    // Pigeon interface for FPS counter as a plugin
     public static class OpenGLPlatformViewPlugin implements PigeonInterface.OpenGLPlatformViewControl, FlutterPlugin {
 
         @Override
         public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
+            // Attach pigeon interface to the flutter engine
             PigeonInterface.OpenGLPlatformViewControl.setUp(binding.getBinaryMessenger(), this);
         }
 
         @Override
         public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+            // Detach pigeon interface from the flutter engine
             PigeonInterface.OpenGLPlatformViewControl.setUp(binding.getBinaryMessenger(), null);
         }
 

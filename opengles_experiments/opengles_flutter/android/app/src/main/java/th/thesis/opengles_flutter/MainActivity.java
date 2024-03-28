@@ -14,6 +14,6 @@ public class MainActivity extends FlutterActivity {
     flutterEngine.getPlugins().add(new OpenglPlatformView.OpenGLPlatformViewPlugin());
     flutterEngine.getPlatformViewsController()
             .getRegistry()
-            .registerViewFactory("OpenglPlatformView", new OpenglPlatformView.Factory());
+            .registerViewFactory("OpenGlPlatformView", new OpenGLPlatformView.Factory());
   }
 }

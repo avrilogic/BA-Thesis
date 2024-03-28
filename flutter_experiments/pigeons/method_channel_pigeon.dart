@@ -14,7 +14,6 @@ import 'package:pigeon/pigeon.dart';
 @HostApi()
 abstract class MethodChannelPigeon {
   String reverse(String input);
-
   int add(int a, int b);
   int subtract(int a, int b);
   int multiply(int a, int b);

@@ -1,6 +1,9 @@
 package th.thesis.androidjni;
 
 public class NativeToJNI {
+
+    public native void myJniCall();
+
     // native stuff
     public native String reverse(String input);
     public native void provideAnser();

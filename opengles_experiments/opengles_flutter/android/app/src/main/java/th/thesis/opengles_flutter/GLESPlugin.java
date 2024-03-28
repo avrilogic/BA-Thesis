@@ -23,7 +23,6 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
         MyGLRendererWorker worker = new MyGLRendererWorker();
         OpenGLRenderer render = new OpenGLRenderer(surface, worker, width.intValue(), height.intValue());
         renders.put(newEntry.id(), render);
-
         result.success(newEntry.id());
     }
 
@@ -31,7 +30,6 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
     public void updateTexture(@NonNull Long textureId, @NonNull Long width, @NonNull Long height, @NonNull PigeonInterface.VoidResult result) {
         OpenGLRenderer render = renders.get(textureId);
         render.onDimensionsChanged(width.intValue(),height.intValue());
-
         result.success();
     }
 
@@ -40,7 +38,6 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
         OpenGLRenderer render = renders.get(textureId);
         render.onDispose();
         renders.delete(textureId);
-
         result.success();
     }
 
@@ -48,8 +45,7 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
     @Override
     public Long getFps(@NonNull Long textureId) {
         OpenGLRenderer render = renders.get(textureId);
-        int fps = render.getFps();
-        return fps;
+        return (long) render.getFps()
     }
 
     @Override

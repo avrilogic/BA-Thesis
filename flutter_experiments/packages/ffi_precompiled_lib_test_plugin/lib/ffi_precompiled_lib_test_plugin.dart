@@ -13,16 +13,8 @@ const String _libName = 'customlib';
 
 /// The dynamic library in which the symbols for [FfiPrecompiledLibTestPluginBindings] can be found.
 final DynamicLibrary _dylib = () {
-  if (Platform.isMacOS || Platform.isIOS) {
-    return DynamicLibrary.open('$_libName.framework/$_libName');
-  }
-  if (Platform.isAndroid || Platform.isLinux) {
-    return DynamicLibrary.open('lib$_libName.so');
-  }
-  if (Platform.isWindows) {
-    return DynamicLibrary.open('$_libName.dll');
-  }
-  throw UnsupportedError('Unknown platform: ${Platform.operatingSystem}');
+  _throwIfUnsupportedPlatform();
+  return DynamicLibrary.open('lib$_libName.so');
 }();
 
 typedef HelloWorldFunc = Pointer<Utf8> Function();
@@ -58,18 +50,13 @@ class SideloadLib {
     try {
       // Getting the response from the URL
       final response = await http.get(Uri.parse(url));
-
-      // Getting a directory to store the file
-      final directory = await getApplicationDocumentsDirectory();
-
       // File path to save the download
+      final directory = await getApplicationDocumentsDirectory();
       final filePath = '${directory.path}/$filename';
-
       // Saving the file
       final file = File(filePath);
       await file.writeAsBytes(response.bodyBytes);
-
-      return file; // You can return the file path or handle it as needed
+      return file;
     } catch (e) {
       // Handle the error
       throw Exception("Error downloading file: $e");
@@ -119,11 +106,24 @@ class SideloadLib {
 
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+      await _throwIfUnsupportedArchitecture(androidInfo.supportedAbis.first);
       return androidInfo.supportedAbis.first;
     }
 
     throw UnsupportedError('Unknown platform: ${Platform.operatingSystem}');
   }
+}
 
-  void autoSetup() async {}
+Future<void> _throwIfUnsupportedArchitecture(String architecture) {
+  final supported = ['arm64-v8a', 'armeabi-v7a', 'x86_64', 'x86'];
+  if (!supported.contains(architecture)) {
+    throw UnsupportedError('Unsupported architecture: $architecture');
+  }
+  return Future.value();
+}
+
+void _throwIfUnsupportedPlatform() {
+  if (!Platform.isAndroid) {
+    throw UnsupportedError('Unknown platform: ${Platform.operatingSystem}');
+  }
 }

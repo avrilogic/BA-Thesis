@@ -5,10 +5,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 class OpenGlPlatformView extends StatelessWidget {
+  static const String viewType = 'OpenGlPlatformView';
+  const OpenGlPlatformView({super.key});
   @override
   Widget build(BuildContext context) {
     return PlatformViewLink(
-      viewType: 'open_gl_view',
+      viewType: viewType,
       surfaceFactory:
           (BuildContext context, PlatformViewController controller) {
         return AndroidViewSurface(
@@ -20,7 +22,7 @@ class OpenGlPlatformView extends StatelessWidget {
       onCreatePlatformView: (PlatformViewCreationParams params) {
         return PlatformViewsService.initSurfaceAndroidView(
           id: params.id,
-          viewType: 'OpenglPlatformView',
+          viewType: viewType,
           layoutDirection: TextDirection.ltr,
           creationParams: <String, dynamic>{},
           creationParamsCodec: StandardMessageCodec(),
