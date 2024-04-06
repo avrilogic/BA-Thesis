@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:opengles_flutter/flutter_fps.dart';
 import 'package:opengles_flutter/pigeon_interface.g.dart';
 
 class OpenGlTexture extends StatefulWidget {
@@ -25,17 +26,23 @@ class _OpenGlTextureState extends State<OpenGlTexture> {
       final value = widget.controller.getFps(_textureId!);
       return value;
     });
-
+    //_fpsStream = Stream.empty();
     return _textureId != null
         ? Column(mainAxisSize: MainAxisSize.max, children: [
             Expanded(
               child: Texture(textureId: _textureId!),
             ),
+            FlutterFps(onFpsSignal: (fps) {
+              final timestamp = DateTime.now().toIso8601String();
+              debugPrint('Flutter_FPS: $timestamp: $fps');
+            }),
             StreamBuilder<int>(
               stream: _fpsStream,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return Text('FPS: ${snapshot.data}');
+                  final timestamp = DateTime.now().toIso8601String();
+                  debugPrint('Render_FPS: $timestamp: ${snapshot.data}');
+                  return Text('Render_FPS: ${snapshot.data}');
                 } else {
                   return const SizedBox.shrink();
                 }

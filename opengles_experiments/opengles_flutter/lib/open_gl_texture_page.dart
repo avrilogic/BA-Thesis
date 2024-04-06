@@ -8,7 +8,7 @@ class OpenGLTexturePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('OpenGL Texture'),
+        title: const Text('OpenGL Texture'),
       ),
       body: Center(
         child: Container(

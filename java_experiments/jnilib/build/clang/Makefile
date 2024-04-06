@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/code/BA-Thesis/java/jnilib
+CMAKE_SOURCE_DIR = /mnt/e/code/BA-Thesis/java_experiments/jnilib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/code/BA-Thesis/java/jnilib/build/clang
+CMAKE_BINARY_DIR = /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles /mnt/e/code/BA-Thesis/java/jnilib/build/clang//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang/CMakeFiles /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,53 +129,29 @@ cppjnilib/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/build
 .PHONY : cppjnilib/fast
 
-src/jni/HelloWorld.o: src/jni/HelloWorld.cpp.o
-.PHONY : src/jni/HelloWorld.o
+src/jni/JavaJniExperiment.o: src/jni/JavaJniExperiment.cpp.o
+.PHONY : src/jni/JavaJniExperiment.o
 
 # target to build an object file
-src/jni/HelloWorld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o
-.PHONY : src/jni/HelloWorld.cpp.o
+src/jni/JavaJniExperiment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o
+.PHONY : src/jni/JavaJniExperiment.cpp.o
 
-src/jni/HelloWorld.i: src/jni/HelloWorld.cpp.i
-.PHONY : src/jni/HelloWorld.i
-
-# target to preprocess a source file
-src/jni/HelloWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.i
-.PHONY : src/jni/HelloWorld.cpp.i
-
-src/jni/HelloWorld.s: src/jni/HelloWorld.cpp.s
-.PHONY : src/jni/HelloWorld.s
-
-# target to generate assembly for a file
-src/jni/HelloWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.s
-.PHONY : src/jni/HelloWorld.cpp.s
-
-src/lib.o: src/lib.cpp.o
-.PHONY : src/lib.o
-
-# target to build an object file
-src/lib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/lib.cpp.o
-.PHONY : src/lib.cpp.o
-
-src/lib.i: src/lib.cpp.i
-.PHONY : src/lib.i
+src/jni/JavaJniExperiment.i: src/jni/JavaJniExperiment.cpp.i
+.PHONY : src/jni/JavaJniExperiment.i
 
 # target to preprocess a source file
-src/lib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/lib.cpp.i
-.PHONY : src/lib.cpp.i
+src/jni/JavaJniExperiment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.i
+.PHONY : src/jni/JavaJniExperiment.cpp.i
 
-src/lib.s: src/lib.cpp.s
-.PHONY : src/lib.s
+src/jni/JavaJniExperiment.s: src/jni/JavaJniExperiment.cpp.s
+.PHONY : src/jni/JavaJniExperiment.s
 
 # target to generate assembly for a file
-src/lib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/lib.cpp.s
-.PHONY : src/lib.cpp.s
+src/jni/JavaJniExperiment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cppjnilib.dir/build.make CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.s
+.PHONY : src/jni/JavaJniExperiment.cpp.s
 
 # Help Target
 help:
@@ -186,12 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cppjnilib"
-	@echo "... src/jni/HelloWorld.o"
-	@echo "... src/jni/HelloWorld.i"
-	@echo "... src/jni/HelloWorld.s"
-	@echo "... src/lib.o"
-	@echo "... src/lib.i"
-	@echo "... src/lib.s"
+	@echo "... src/jni/JavaJniExperiment.o"
+	@echo "... src/jni/JavaJniExperiment.i"
+	@echo "... src/jni/JavaJniExperiment.s"
 .PHONY : help
 
 

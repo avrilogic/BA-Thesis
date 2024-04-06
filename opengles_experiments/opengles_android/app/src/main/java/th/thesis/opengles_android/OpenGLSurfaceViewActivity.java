@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
-public class OpenGLES20Activity extends Activity {
+public class OpenGLSurfaceViewActivity extends Activity {
     private GLSurfaceView gLView;
 
     @Override

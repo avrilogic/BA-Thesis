@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/e/code/BA-Thesis/java/jnilib
+CMAKE_SOURCE_DIR = /mnt/e/code/BA-Thesis/java_experiments/jnilib
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/e/code/BA-Thesis/java/jnilib/build/clang
+CMAKE_BINARY_DIR = /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cppjnilib.dir/depend.make
@@ -69,47 +69,31 @@ include CMakeFiles/cppjnilib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cppjnilib.dir/flags.make
 
-CMakeFiles/cppjnilib.dir/src/lib.cpp.o: CMakeFiles/cppjnilib.dir/flags.make
-CMakeFiles/cppjnilib.dir/src/lib.cpp.o: ../../src/lib.cpp
-CMakeFiles/cppjnilib.dir/src/lib.cpp.o: CMakeFiles/cppjnilib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cppjnilib.dir/src/lib.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cppjnilib.dir/src/lib.cpp.o -MF CMakeFiles/cppjnilib.dir/src/lib.cpp.o.d -o CMakeFiles/cppjnilib.dir/src/lib.cpp.o -c /mnt/e/code/BA-Thesis/java/jnilib/src/lib.cpp
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o: CMakeFiles/cppjnilib.dir/flags.make
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o: ../../src/jni/JavaJniExperiment.cpp
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o: CMakeFiles/cppjnilib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o -MF CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o.d -o CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o -c /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.cpp
 
-CMakeFiles/cppjnilib.dir/src/lib.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppjnilib.dir/src/lib.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/code/BA-Thesis/java/jnilib/src/lib.cpp > CMakeFiles/cppjnilib.dir/src/lib.cpp.i
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.cpp > CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.i
 
-CMakeFiles/cppjnilib.dir/src/lib.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppjnilib.dir/src/lib.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/code/BA-Thesis/java/jnilib/src/lib.cpp -o CMakeFiles/cppjnilib.dir/src/lib.cpp.s
-
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o: CMakeFiles/cppjnilib.dir/flags.make
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o: ../../src/jni/HelloWorld.cpp
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o: CMakeFiles/cppjnilib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o -MF CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o.d -o CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o -c /mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.cpp
-
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.cpp > CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.i
-
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.cpp -o CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.s
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.cpp -o CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.s
 
 # Object files for target cppjnilib
 cppjnilib_OBJECTS = \
-"CMakeFiles/cppjnilib.dir/src/lib.cpp.o" \
-"CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o"
+"CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o"
 
 # External object files for target cppjnilib
 cppjnilib_EXTERNAL_OBJECTS =
 
-libcppjnilib.so: CMakeFiles/cppjnilib.dir/src/lib.cpp.o
-libcppjnilib.so: CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o
+libcppjnilib.so: CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o
 libcppjnilib.so: CMakeFiles/cppjnilib.dir/build.make
 libcppjnilib.so: CMakeFiles/cppjnilib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libcppjnilib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libcppjnilib.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cppjnilib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +105,6 @@ CMakeFiles/cppjnilib.dir/clean:
 .PHONY : CMakeFiles/cppjnilib.dir/clean
 
 CMakeFiles/cppjnilib.dir/depend:
-	cd /mnt/e/code/BA-Thesis/java/jnilib/build/clang && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/e/code/BA-Thesis/java/jnilib /mnt/e/code/BA-Thesis/java/jnilib /mnt/e/code/BA-Thesis/java/jnilib/build/clang /mnt/e/code/BA-Thesis/java/jnilib/build/clang /mnt/e/code/BA-Thesis/java/jnilib/build/clang/CMakeFiles/cppjnilib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/e/code/BA-Thesis/java_experiments/jnilib /mnt/e/code/BA-Thesis/java_experiments/jnilib /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang /mnt/e/code/BA-Thesis/java_experiments/jnilib/build/clang/CMakeFiles/cppjnilib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cppjnilib.dir/depend
 

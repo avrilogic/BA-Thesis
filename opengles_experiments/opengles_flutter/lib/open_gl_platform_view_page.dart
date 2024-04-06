@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:opengles_flutter/flutter_fps.dart';
 import 'package:opengles_flutter/open_gl_platform_view.dart';
 import 'package:opengles_flutter/pigeon_interface.g.dart';
 
@@ -22,7 +23,11 @@ class OpenGlPlatformViewPage extends StatelessWidget {
           ),
           child: Column(children: [
             const Expanded(child: OpenGlPlatformView()),
-            OpenGlPlatformViewFps()
+            OpenGlPlatformViewFps(),
+            FlutterFps(onFpsSignal: (fps) {
+              final timestamp = DateTime.now().toIso8601String();
+              debugPrint('Flutter_FPS: $timestamp: $fps');
+            }),
           ]),
         ),
       ),
@@ -46,6 +51,9 @@ class OpenGlPlatformViewFps extends StatelessWidget {
       stream: fpsStream,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
+          // print Timestamp and FPS
+          final timestamp = DateTime.now().toIso8601String();
+          debugPrint('Render_FPS: $timestamp: ${snapshot.data}');
           return Text('FPS: ${snapshot.data}');
         } else {
           return const SizedBox.shrink();

@@ -30,14 +30,14 @@ class MainActivity : ComponentActivity() {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = {
-                            val intent = Intent(this@MainActivity, OpenGLES20Activity::class.java)
+                            val intent = Intent(this@MainActivity, OpenGLSurfaceViewActivity::class.java)
                             startActivity(intent)
                         }) {
                             Text("Start as GLSurfaceView")
                         }
                         Spacer(modifier = Modifier.height(16.dp))
                         Button(onClick = {
-                            val intent = Intent(this@MainActivity, TextureActivity::class.java)
+                            val intent = Intent(this@MainActivity, OpenGLTextureActivity::class.java)
                             startActivity(intent)
                         }) {
                             Text("Start as TextureView")

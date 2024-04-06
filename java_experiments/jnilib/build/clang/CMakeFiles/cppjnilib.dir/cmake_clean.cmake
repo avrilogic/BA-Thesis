@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o"
-  "CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o.d"
-  "CMakeFiles/cppjnilib.dir/src/lib.cpp.o"
-  "CMakeFiles/cppjnilib.dir/src/lib.cpp.o.d"
+  "CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o"
+  "CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o.d"
   "libcppjnilib.pdb"
   "libcppjnilib.so"
 )

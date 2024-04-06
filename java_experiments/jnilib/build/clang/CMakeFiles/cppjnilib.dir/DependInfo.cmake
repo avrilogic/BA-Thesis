@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.cpp" "CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o" "gcc" "CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o.d"
-  "/mnt/e/code/BA-Thesis/java/jnilib/src/lib.cpp" "CMakeFiles/cppjnilib.dir/src/lib.cpp.o" "gcc" "CMakeFiles/cppjnilib.dir/src/lib.cpp.o.d"
+  "/mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.cpp" "CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o" "gcc" "CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o.d"
   )
 
 # Targets to which this target links.

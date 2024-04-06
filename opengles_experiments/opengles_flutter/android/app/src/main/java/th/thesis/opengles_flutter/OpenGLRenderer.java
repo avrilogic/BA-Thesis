@@ -30,7 +30,7 @@ public class OpenGLRenderer implements Runnable {
     private int height;
     private volatile boolean sizeChanged = true;
     private FPSCounter fpsCounter = new FPSCounter();
-    private int fpsLimit = 120;
+    private int fpsLimit = 500;
 
     public OpenGLRenderer(SurfaceTexture texture, Worker worker, int width, int height) {
         this.texture = texture;

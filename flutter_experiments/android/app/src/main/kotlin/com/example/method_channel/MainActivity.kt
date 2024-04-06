@@ -12,7 +12,4 @@ class MainActivity: FlutterActivity() {
         MyMethodChannels(flutterEngine.dartExecutor.binaryMessenger, applicationContext)
         flutterEngine.plugins.add(PigeonImpl())
     }
-
-
-
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:opengles_flutter/open_gl_platform_view_page.dart';
-import 'package:opengles_flutter/open_gl_texture.dart';
 import 'package:opengles_flutter/open_gl_texture_page.dart';
 
 void main() {

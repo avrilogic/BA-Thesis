@@ -1,10 +1,10 @@
-class HelloWorld {
+class JavaJniExperiment {
     private native void print();
     private native String reverse(String input);
     private native int[][] matrixMultiplication(int[][] a, int[][] b);
     private native void printArray(int[][] a);
     public static void main(String[] args) {
-        HelloWorld hw = new HelloWorld();
+        JavaJniExperiment hw = new JavaJniExperiment();
         hw.print();
         System.out.println(hw.reverse("Reverse CPP Method Call!"));
 

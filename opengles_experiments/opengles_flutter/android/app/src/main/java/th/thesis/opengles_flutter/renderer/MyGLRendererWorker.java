@@ -8,7 +8,7 @@ import th.thesis.opengles_flutter.OpenGLRenderer;
 
 public class MyGLRendererWorker implements OpenGLRenderer.Worker {
     private Square mSquare;
-
+    boolean flip = false;
 
     public static int loadShader(int type, String shaderCode) {
 
@@ -44,10 +44,11 @@ public class MyGLRendererWorker implements OpenGLRenderer.Worker {
     @Override
     public boolean onDraw() {
         // Redraw background color
-        float[] color = ColorPalette.blue();
+        float[] color = flip ? ColorPalette.blue() : ColorPalette.violet();
         GLES20.glClearColor(color[0], color[1], color[2], color[3]);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
         mSquare.draw();
+        flip = !flip;
         return true;
     }
 
