@@ -4,11 +4,10 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ConfigurationInfo;
-import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
 
-public class TextureActivity extends Activity {
+public class OpenGLTextureActivity extends Activity {
     private MyGLTextureView gLView;
 
     @Override
@@ -18,7 +17,7 @@ public class TextureActivity extends Activity {
         // Create a GLSurfaceView instance and set it
         // as the ContentView for this Activity.
         gLView = new MyGLTextureView(this);
-        gLView.setRenderer(new MyGLRenderer());
+        gLView.setRenderer(new MyGLSurfaceViewRenderer());
         if (detectOpenGLES20()) {
             setContentView(gLView);
         }

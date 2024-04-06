@@ -1,2 +1,2 @@
 #!/bin/bash
-(cd build && java -Djava.library.path=.  HelloWorld)
+(cd build && java -Djava.library.path=.  JavaJniExperiment)

@@ -23,10 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OpenGLES20Activity">
+        <activity android:name=".OpenGLSurfaceViewActivity">
             <!-- other properties -->
         </activity>
-        <activity android:name=".TextureActivity">
+        <activity android:name=".OpenGLTextureActivity">
             <!-- other properties -->
         </activity>
     </application>

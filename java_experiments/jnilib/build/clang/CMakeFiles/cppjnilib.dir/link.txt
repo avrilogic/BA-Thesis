@@ -1,1 +1,1 @@
-/usr/bin/clang++ -fPIC -Wall -Wextra -shared -Wl,-soname,libcppjnilib.so -o libcppjnilib.so CMakeFiles/cppjnilib.dir/src/lib.cpp.o CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o 
+/usr/bin/clang++ -fPIC -Wall -Wextra -shared -Wl,-soname,libcppjnilib.so -o libcppjnilib.so CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o 

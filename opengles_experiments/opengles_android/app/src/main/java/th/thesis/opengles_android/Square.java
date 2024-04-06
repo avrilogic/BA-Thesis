@@ -51,9 +51,9 @@ public class Square {
         drawListBuffer.put(drawOrder);
         drawListBuffer.position(0);
 
-        int vertexShader = MyGLRenderer.loadShader(GLES20.GL_VERTEX_SHADER,
+        int vertexShader = MyGLSurfaceViewRenderer.loadShader(GLES20.GL_VERTEX_SHADER,
                 vertexShaderCode);
-        int fragmentShader = MyGLRenderer.loadShader(GLES20.GL_FRAGMENT_SHADER,
+        int fragmentShader = MyGLSurfaceViewRenderer.loadShader(GLES20.GL_FRAGMENT_SHADER,
                 fragmentShaderCode);
 
         // create empty OpenGL ES Program

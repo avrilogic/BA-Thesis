@@ -11,7 +11,7 @@ public class MainActivity extends FlutterActivity {
   public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
     super.configureFlutterEngine(flutterEngine);
     flutterEngine.getPlugins().add(new GLESPlugin());
-    flutterEngine.getPlugins().add(new OpenglPlatformView.OpenGLPlatformViewPlugin());
+    flutterEngine.getPlugins().add(new OpenGLPlatformView.OpenGLPlatformViewPlugin());
     flutterEngine.getPlatformViewsController()
             .getRegistry()
             .registerViewFactory("OpenGlPlatformView", new OpenGLPlatformView.Factory());

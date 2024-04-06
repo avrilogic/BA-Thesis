@@ -4,15 +4,10 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-import java.nio.ShortBuffer;
-
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class MyGLRenderer implements GLSurfaceView.Renderer {
+public class MyGLSurfaceViewRenderer implements GLSurfaceView.Renderer {
     private Square mSquare;
 
     // Called once to set up the view's OpenGL ES environment.

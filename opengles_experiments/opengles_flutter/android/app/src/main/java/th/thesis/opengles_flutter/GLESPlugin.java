@@ -45,7 +45,7 @@ public class GLESPlugin implements PigeonInterface.OpenGLESRenderPlugin, Flutter
     @Override
     public Long getFps(@NonNull Long textureId) {
         OpenGLRenderer render = renders.get(textureId);
-        return (long) render.getFps()
+        return (long) render.getFps();
     }
 
     @Override

@@ -1,6 +1,6 @@
-CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o: \
-  /mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.cpp \
-  /mnt/e/code/BA-Thesis/java/jnilib/src/jni/HelloWorld.h \
+CMakeFiles/cppjnilib.dir/src/jni/JavaJniExperiment.cpp.o: \
+  /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.cpp \
+  /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/JavaJniExperiment.h \
   /root/.sdkman/candidates/java/current/include/jni.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -170,8 +170,8 @@ CMakeFiles/cppjnilib.dir/src/jni/HelloWorld.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/istream.tcc \
-  /mnt/e/code/BA-Thesis/java/jnilib/src/jni/ext_int_matrix.hpp \
-  /mnt/e/code/BA-Thesis/java/jnilib/src/libs/int_matrix.hpp \
+  /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/jni/ext_int_matrix.hpp \
+  /mnt/e/code/BA-Thesis/java_experiments/jnilib/src/libs/int_matrix.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_uninitialized.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/bits/stl_vector.h \

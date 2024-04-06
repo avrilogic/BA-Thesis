@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = -Dcppjnilib_EXPORTS
 
-CXX_INCLUDES = -I/root/.sdkman/candidates/java/current/include -I/root/.sdkman/candidates/java/current/include/linux -I/mnt/e/code/BA-Thesis/java/jnilib/src/libs
+CXX_INCLUDES = -I/root/.sdkman/candidates/java/current/include -I/root/.sdkman/candidates/java/current/include/linux -I/mnt/e/code/BA-Thesis/java_experiments/jnilib/src/libs
 
 CXX_FLAGS = -Wall -Wextra -fPIC -std=gnu++17
 

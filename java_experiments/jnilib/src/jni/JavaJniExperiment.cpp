@@ -1,14 +1,14 @@
-#include "HelloWorld.h"
+#include "JavaJniExperiment.h"
 #include <iostream>
 #include  "ext_int_matrix.hpp"
 using namespace std;
 
-JNIEXPORT void JNICALL Java_HelloWorld_print(JNIEnv *, jobject)
+JNIEXPORT void JNICALL Java_JavaJniExperiment_print(JNIEnv *, jobject)
 {
     cout << "Hello, World from C++!" << endl;
 }
 
-JNIEXPORT jstring JNICALL Java_HelloWorld_reverse(JNIEnv *env, jobject, jstring input)
+JNIEXPORT jstring JNICALL Java_JavaJniExperiment_reverse(JNIEnv *env, jobject, jstring input)
 {
 
     const char *str = env->GetStringUTFChars(input, 0);
@@ -23,7 +23,7 @@ JNIEXPORT jstring JNICALL Java_HelloWorld_reverse(JNIEnv *env, jobject, jstring 
     return env->NewStringUTF(buf);
 }
 
-JNIEXPORT jobjectArray JNICALL Java_HelloWorld_matrixMultiplication(JNIEnv *env, jobject, jobjectArray a, jobjectArray b)
+JNIEXPORT jobjectArray JNICALL Java_JavaJniExperiment_matrixMultiplication(JNIEnv *env, jobject, jobjectArray a, jobjectArray b)
 {
     ExtIntMatrix A(env, a);
     ExtIntMatrix B(env, b);
@@ -32,7 +32,7 @@ JNIEXPORT jobjectArray JNICALL Java_HelloWorld_matrixMultiplication(JNIEnv *env,
     return C.toJObjectArray(env);
 }
 
-JNIEXPORT void JNICALL Java_HelloWorld_printArray
+JNIEXPORT void JNICALL Java_JavaJniExperiment_printArray
   (JNIEnv *env, jobject, jobjectArray in)
   {
     ExtIntMatrix A(env, in);
