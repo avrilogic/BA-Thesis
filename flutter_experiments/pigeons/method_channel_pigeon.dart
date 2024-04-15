@@ -19,6 +19,7 @@ abstract class MethodChannelPigeon {
   int multiply(int a, int b);
   int divide(int a, int b);
   ComplexStructure getComplexStructure();
+  Uint8List benchmark(Uint8List request);
 }
 
 class ComplexStructure {

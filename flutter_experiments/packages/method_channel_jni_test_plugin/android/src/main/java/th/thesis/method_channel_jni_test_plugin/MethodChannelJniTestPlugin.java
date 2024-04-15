@@ -70,4 +70,10 @@ public class MethodChannelJniTestPlugin implements FlutterPlugin, CppExperimentP
     libNative.provideAnser();
   }
 
+
+  @Override
+  public byte[] benchmark(byte[] request) {
+    return libNative.benchmark(request);
+  }
+
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiments/benchmark/benchmark_tab.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter_experiments/logger/logger_view.dart';
-import 'package:flutter_experiments/settings/settings_page.dart';
 
-class OptionsPage extends StatelessWidget {
-  const OptionsPage({super.key});
+class ExtrasPage extends StatelessWidget {
+  const ExtrasPage({super.key});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -19,16 +19,16 @@ class OptionsPage extends StatelessWidget {
                 text: 'Info',
               ),
               Tab(
-                icon: Icon(Icons.settings),
-                text: 'Settings',
+                icon: Icon(Icons.speed),
+                text: 'Benchmark',
               ),
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            InfoPage(),
-            SettingsPage(),
+            const InfoPage(),
+            BenchmarkTab(),
           ],
         ),
       ),
@@ -91,4 +91,14 @@ class _AppInfos extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget extrasButton(BuildContext context) {
+  return FloatingActionButton(
+    onPressed: () {
+      Navigator.pushNamed(context, '/options');
+    },
+    tooltip: 'Extras',
+    child: const Icon(Icons.more_horiz),
+  );
 }

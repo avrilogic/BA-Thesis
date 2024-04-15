@@ -10,4 +10,5 @@ extern "C" {
   double calculate(calculation_request request);
   calculation_request create_request(double a, double b, int operation);
   void free_request(calculation_request request);
+  void benchmark(uint8_t* data, int length);
 }

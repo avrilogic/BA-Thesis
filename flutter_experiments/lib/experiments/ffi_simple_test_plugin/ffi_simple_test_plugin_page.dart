@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/ffi_simple_test_plugin/ffi_simple_test_plugin_cards.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class FFISimpleTestPluginPage extends StatelessWidget {
   const FFISimpleTestPluginPage({super.key});
@@ -23,6 +23,6 @@ class FFISimpleTestPluginPage extends StatelessWidget {
             FFISimpleTestPluginReverseStringCard(),
           ],
         ),
-        floatingActionButton: settingsButton(context));
+        floatingActionButton: extrasButton(context));
   }
 }

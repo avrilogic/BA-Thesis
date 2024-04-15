@@ -44,3 +44,9 @@ calculation_request create_request(double a, double b, int operation) {
   request.type = CalculationType(operation);
   return request;
 }
+
+void benchmark(uint8_t* data, int length){
+  for (int i = 0; i < length; i++) {
+    data[i] = data[i] + 1;
+  }
+}

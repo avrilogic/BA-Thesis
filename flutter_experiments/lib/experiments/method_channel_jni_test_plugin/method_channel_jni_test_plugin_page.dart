@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/method_channel_jni_test_plugin/method_channel_jni_test_plugin_card.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class MethodChannelJniTestPluginPage extends StatelessWidget {
   const MethodChannelJniTestPluginPage({super.key});
@@ -23,6 +23,6 @@ class MethodChannelJniTestPluginPage extends StatelessWidget {
             MethodChannelJniTestPluginGetAnswerCard(),
           ],
         ),
-        floatingActionButton: settingsButton(context));
+        floatingActionButton: extrasButton(context));
   }
 }

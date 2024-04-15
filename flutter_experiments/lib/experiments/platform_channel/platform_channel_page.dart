@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/platform_channel/platform_channel_card.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class PlatformChannelPage extends StatelessWidget {
   const PlatformChannelPage({super.key});
@@ -22,6 +22,6 @@ class PlatformChannelPage extends StatelessWidget {
             PlatformChannelAndroidVersionCard(),
           ],
         ),
-        floatingActionButton: settingsButton(context));
+        floatingActionButton: extrasButton(context));
   }
 }

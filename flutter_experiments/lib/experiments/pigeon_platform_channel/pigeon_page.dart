@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/pigeon_platform_channel/pigeon_cards.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class PigeonPage extends StatelessWidget {
   const PigeonPage({super.key});
@@ -23,7 +23,7 @@ class PigeonPage extends StatelessWidget {
           PigeonPlatformChannelComplexStructureCard(),
         ],
       ),
-      floatingActionButton: settingsButton(context),
+      floatingActionButton: extrasButton(context),
     );
   }
 }

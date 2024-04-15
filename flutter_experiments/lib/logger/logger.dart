@@ -27,9 +27,9 @@ final class Logger extends ChangeNotifier {
           textColor: Colors.white,
           fontSize: 16.0);
     }
-    if (kDebugMode) {
-      print(log.toString());
-    }
+
+    // ignore: avoid_print
+    print(log.toString());
   }
 
   static void add(LogLevel level, String message) =>

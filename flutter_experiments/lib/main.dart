@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_experiments/logger/logger.dart';
 import 'package:flutter_experiments/experiments/platform_channel/platform_channel_provider.dart';
 import 'package:flutter_experiments/routes.dart';
-import 'package:flutter_experiments/settings/settings_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
     Logger.debug('Building app');
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => SettingsProvider()),
         ChangeNotifierProvider(create: (context) => PlatformChannelProvider()),
         ChangeNotifierProvider(create: (context) => Logger()),
       ],

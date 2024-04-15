@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:typed_data';
 import 'package:ffi/ffi.dart';
 
 typedef CString = Pointer<Utf8>;
@@ -37,3 +38,7 @@ typedef CreateCalculationRequest = CalculationRequest Function(
     double, double, int);
 typedef CreateCalculationRequestNative = CalculationRequest Function(
     Double, Double, Int32);
+
+// Define the type for the C function.
+typedef CBenchmark = Void Function(Pointer<Uint8>, Int32);
+typedef DartBenchmark = void Function(Pointer<Uint8>, int);

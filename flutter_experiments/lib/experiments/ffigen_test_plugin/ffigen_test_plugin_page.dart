@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/ffigen_test_plugin/ffigen_test_plugin_cards.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class FFIGenTestPluginPage extends StatelessWidget {
   const FFIGenTestPluginPage({super.key});
@@ -24,6 +24,6 @@ class FFIGenTestPluginPage extends StatelessWidget {
             FFIGenTestPluginReverseStringCard(),
           ],
         ),
-        floatingActionButton: settingsButton(context));
+        floatingActionButton: extrasButton(context));
   }
 }

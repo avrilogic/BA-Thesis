@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiments/extras_page.dart';
 import 'package:flutter_experiments/routes.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,13 +14,7 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: menuEntries.toTiles(),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/options');
-        },
-        tooltip: 'Options',
-        child: const Icon(Icons.settings),
-      ),
+      floatingActionButton: extrasButton(context),
     );
   }
 }

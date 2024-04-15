@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_experiments/experiments/ffi_precompiled_lib_test_plugin/ffi_precompiled_lib_test_plugin_cards.dart';
-import 'package:flutter_experiments/settings/settings_button.dart';
+import 'package:flutter_experiments/extras_page.dart';
 
 class FFIPrecompiledLibTestPluginPage extends StatelessWidget {
   const FFIPrecompiledLibTestPluginPage({super.key});
@@ -23,6 +23,6 @@ class FFIPrecompiledLibTestPluginPage extends StatelessWidget {
             SizedBox(height: 60),
           ],
         ),
-        floatingActionButton: settingsButton(context));
+        floatingActionButton: extrasButton(context));
   }
 }

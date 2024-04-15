@@ -82,6 +82,15 @@ public class PigeonImpl implements FlutterPlugin, Messages.MethodChannelPigeon {
         return builder.build();
     }
 
+    @NonNull
+    @Override
+    public byte[] benchmark(@NonNull byte[] request) {
+        for (int i = 0; i < request.length; i++) {
+            request[i] = (byte) (request[i] + 1);
+        }
+        return request;
+    }
+
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
         setup(binding.getBinaryMessenger(), binding.getApplicationContext());

@@ -264,6 +264,9 @@ public class Messages {
     @NonNull 
     ComplexStructure getComplexStructure();
 
+    @NonNull 
+    byte[] benchmark(@NonNull byte[] request);
+
     /** The codec used by MethodChannelPigeon. */
     static @NonNull MessageCodec<Object> getCodec() {
       return MethodChannelPigeonCodec.INSTANCE;
@@ -404,6 +407,30 @@ public class Messages {
                 ArrayList<Object> wrapped = new ArrayList<Object>();
                 try {
                   ComplexStructure output = api.getComplexStructure();
+                  wrapped.add(0, output);
+                }
+ catch (Throwable exception) {
+                  ArrayList<Object> wrappedError = wrapError(exception);
+                  wrapped = wrappedError;
+                }
+                reply.reply(wrapped);
+              });
+        } else {
+          channel.setMessageHandler(null);
+        }
+      }
+      {
+        BasicMessageChannel<Object> channel =
+            new BasicMessageChannel<>(
+                binaryMessenger, "dev.flutter.pigeon.pigeon_example_package.MethodChannelPigeon.benchmark", getCodec());
+        if (api != null) {
+          channel.setMessageHandler(
+              (message, reply) -> {
+                ArrayList<Object> wrapped = new ArrayList<Object>();
+                ArrayList<Object> args = (ArrayList<Object>) message;
+                byte[] requestArg = (byte[]) args.get(0);
+                try {
+                  byte[] output = api.benchmark(requestArg);
                   wrapped.add(0, output);
                 }
  catch (Throwable exception) {

@@ -33,3 +33,20 @@ Java_th_thesis_method_1channel_1jni_1test_1plugin_NativeToJni_getHelloWorld(JNIE
     std::string hello = "Hello from C++";
     return env->NewStringUTF(hello.c_str());
 }
+
+extern "C"
+JNIEXPORT jbyteArray JNICALL
+Java_th_thesis_method_1channel_1jni_1test_1plugin_NativeToJni_benchmark(JNIEnv *env, jobject thiz,
+                                                                        jbyteArray request) {
+    if (request == NULL) {
+        return NULL; // Return NULL or throw an exception as per your error handling
+    }
+    jsize length = env->GetArrayLength(request);
+    jbyte* elements = env->GetByteArrayElements(request, NULL);
+
+    for (jsize i = 0; i < length; i++) {
+        elements[i]++;
+    }
+    env->ReleaseByteArrayElements(request, elements, 0); // 0 to copy back the changes
+    return request;
+}

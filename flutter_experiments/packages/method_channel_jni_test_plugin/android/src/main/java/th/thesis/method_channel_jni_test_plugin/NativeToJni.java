@@ -9,8 +9,8 @@ public class NativeToJni {
   public native String reverse(String input);
   public native void provideAnser();
   public native String getHelloWorld();
-  
 
+  public native byte[] benchmark( byte[] request);
   public int getAnswer() {
       return answer;
   }

@@ -8,7 +8,8 @@ import 'package:pigeon/pigeon.dart';
   // cppSourceOut: 'windows/runner/messages.g.cpp',
   // kotlinOut: 'android/app/src/main/kotlin/dev/flutter/pigeon/Messages.g.kt',
   // kotlinOptions: KotlinOptions(),
-  javaOut: 'android/src/main/java/th/thesis/cpptestlib/Messages.java',
+  javaOut:
+      'android/src/main/java/th/thesis/method_channel_jni_test_plugin/Messages.java',
   javaOptions: JavaOptions(
     package: 'th.thesis.method_channel_jni_test_plugin',
     className: 'Messages',
@@ -29,4 +30,5 @@ abstract class CppExperimentPigeon {
   String reverse(String str);
   int getAnswer();
   void provideAnswer();
+  Uint8List benchmark(Uint8List request);
 }

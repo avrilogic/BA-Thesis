@@ -5,7 +5,7 @@ import 'package:flutter_experiments/experiments/ffi_precompiled_lib_test_plugin/
 import 'package:flutter_experiments/experiments/ffigen_test_plugin/ffigen_test_plugin_page.dart';
 import 'package:flutter_experiments/home_page.dart';
 import 'package:flutter_experiments/logger/logger_page.dart';
-import 'package:flutter_experiments/options_page.dart';
+import 'package:flutter_experiments/extras_page.dart';
 import 'package:flutter_experiments/experiments/pigeon_platform_channel/pigeon_page.dart';
 import 'package:flutter_experiments/experiments/platform_channel/platform_channel_page.dart';
 
@@ -60,7 +60,7 @@ final List<ExperimentMenuEntry> menuEntries = [
 
 final routes = {
   '/': (BuildContext context) => const HomePage(),
-  '/options': (BuildContext context) => const OptionsPage(),
+  '/options': (BuildContext context) => const ExtrasPage(),
   '/options/info/logger': (BuildContext context) => const LoggerPage(),
   for (var entry in menuEntries) entry.route: entry.builder,
 };

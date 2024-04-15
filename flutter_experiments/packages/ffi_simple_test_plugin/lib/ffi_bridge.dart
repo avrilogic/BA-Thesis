@@ -1,5 +1,6 @@
 import 'dart:ffi';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:ffi/ffi.dart';
 import 'package:ffi_simple_test_plugin/ffi_types.dart';
@@ -10,6 +11,7 @@ class FFIBridge {
   late final ReverseString _reverseString;
   late final FreeString _freeString;
   late final Calculate _calculate;
+  late final DartBenchmark _benchmark;
 
   late final DynamicLibrary _dylib;
 
@@ -28,6 +30,7 @@ class FFIBridge {
     _freeString =
         _dylib.lookupFunction<FreeStringNative, FreeString>('free_string');
     _calculate = _dylib.lookupFunction<CalculateNative, Calculate>('calculate');
+    _benchmark = _dylib.lookupFunction<CBenchmark, DartBenchmark>('benchmark');
   }
 
   String helloWorld() {
@@ -53,6 +56,16 @@ class FFIBridge {
       ..b = b
       ..operation = operation.index;
     final result = _calculate(ref);
+    return result;
+  }
+
+  Uint8List benchmark(Uint8List data) {
+    final allocatedSpace = calloc<Uint8>(data.length);
+    final pointerList = allocatedSpace.asTypedList(data.length);
+    pointerList.setAll(0, data);
+    _benchmark(allocatedSpace, data.length);
+    final Uint8List result = Uint8List.fromList(pointerList);
+    calloc.free(allocatedSpace);
     return result;
   }
 }
