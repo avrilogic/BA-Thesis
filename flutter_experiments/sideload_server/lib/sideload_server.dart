@@ -18,7 +18,7 @@ void run(int port) async {
   });
 
   var handler =
-      const Pipeline().addMiddleware(logRequests()).addHandler(router);
+      const Pipeline().addMiddleware(logRequests()).addHandler(router.call);
 
   // Serve the 'www' folder
   var staticHandler = createStaticHandler('www', listDirectories: true);

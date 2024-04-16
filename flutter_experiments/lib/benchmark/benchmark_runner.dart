@@ -1,9 +1,6 @@
-import 'dart:isolate';
-import 'dart:typed_data';
 
 import 'package:ffi_simple_test_plugin/ffi_bridge.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_experiments/benchmark/benchmark_data.dart';
 import 'package:flutter_experiments/experiments/pigeon_platform_channel/messages.g.dart';
 import 'package:flutter_experiments/logger/logger.dart';

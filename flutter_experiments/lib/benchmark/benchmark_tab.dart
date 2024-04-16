@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_experiments/benchmark/benchmark_data.dart';
 import 'package:flutter_experiments/benchmark/benchmark_runner.dart';
 import 'package:multi_select_flutter/dialog/multi_select_dialog_field.dart';
@@ -142,7 +141,7 @@ class _AddCardState extends State<AddCard> {
                   .map((type) =>
                       MultiSelectItem<BenchmarkType>(type, type.toString()))
                   .toList(),
-              title: Text("Benchmark Types"),
+              title: const Text("Benchmark Types"),
               selectedColor: Colors.blue,
               initialValue: types,
               onConfirm: (values) {
